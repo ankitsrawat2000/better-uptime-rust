@@ -7,7 +7,7 @@ Store{
 }
 
 impl Store {
-    pub fn default() -> Result<Self, ConnectionError> {
+    pub fn new() -> Result<Self, ConnectionError> {
         let config = Config::default();
         let db_url = config.db_url;
         // Establish a connection to the database using the URL from the config
